@@ -1,0 +1,16 @@
+[user]
+    name = Salafy1710
+    email = salafy171009@student.abudzar.sch.id
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    required = true
+    process = git-lfs filter-process
+[core]
+    editor = code --wait
+[diff]
+    tool = default.difftool
+
+[difftool "default.difftool"]
+    cmd = code --wait --diff "$LOCAL" "$REMOTE"   hsuadsuvsuavudagygduvbsdauwy
