@@ -1,0 +1,3 @@
+[submodule "belajar-submodule"]
+	path = belajar-submodule
+	url = https://github.com/Salafy1710/belajar-module2
