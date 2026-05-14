@@ -1,0 +1,88 @@
+note : 
+(.) titik = keseluruhan
+nama_file = spesifik file tersebut
+
+vocabulary :
+-f = force 
+diff = diffrence
+init = initialization
+
+git config --global --edit : untuk mengedit configurasi secara detail 
+git config --global user.name
+git diff : membandingkan perubahan pada file 
+git clean -f : membersihkan perubahan pada area working directory
+git restore : mengembalikan perubahan pada area working directory
+git restore --staged : mengembalikan area yang sebelumnya staging index -> working directory
+git log : untuk melihat seluruh riwayat commit
+git log --oneline : sama semerti git log namun lebih ringkas
+git show (code hasnya) : untuk melihat perubahan pada commit
+git diff (code hash 1) (code hash 2) : untuk membandingkan 2 commit secara spesifik
+git commit --amend : untuk reset soft commit sebelumnya 
+git branch / git branch --list : untuk melihat keseluruhan branch
+git branch --show-current : untuk melihat lokasi kita pada branch
+git branch namabranch : untuk buat branch
+git switch : untuk pindah branch
+git checkout : untuk pindah commit, branch, tag
+git branch -d / --deletet : delete branch
+git stash : untuk melakukan perubahan pada branch, namun perubahan tersebut belum tersimpan di repository
+git alias : untuk memberikan alias pada perintah
+git blame : untuk mencari tahu siapa yang melakukan perubahan tersebut 
+git tag (namatag) commit id = untuk buat tag di repository local
+git push namaremote namatag = untuk push perubahan tag pada remote repository
+git fetch origin / git fetch origin namatag = untuk mengambil perubahan pada tag
+
+MENGGABUNGKAN 2 BRANCH :
+- git merge : menggabungkan 2 branch, dengan 1 kommit baru pada main atau branch yang dituju, punya 2 orangtua
+- git rebase : menggabungkan 2 branch namun menduplikat semua commit dari sumber branch dan menyimpannya pada branch yang dituju
+- git merge --squash : menggabungkan 2 branch, dengan 1 kommit baru pada main atau branch yang dituju, punya 1 orangtua
+
+GIT RESET
+Perumpamaan : 
+working directory : kertas kosong
+staging area : kertas berada di meja guru
+commit : kertas di simpen di meja loker guru 
+
+mode :
+- soft : kertas di kembalikan ke meja guru artinya perubahan di kembalikan ke staging index
+- mixed : kertas di kembalikan ke anak tersebut artinya perubahan kembali ke working directory
+- hard : kertas di robek guru artinya perubahan benar2 dihapus / direset
+
+cara buat ssh key 
+1. buka CMD 
+2. lalu tuliskan ssh-keygen
+3. setelah tergenerate sshkeynya lalu copy key tersebut 
+4. lalu buka github github.com/settings/keys
+5. lalu add new key dan masukan keynya 
+
+git remote : untuk melihat variable dari sebuah git url
+git remote get-url nama = untuk melihat url secara detail
+git remote add (nama) git-url = untuk nambah variable
+
+contoh : penggunaan remote
+git remote origin master
+git remote git@github.com:MuhamadIlhamMubarrok/belajar-github.git master
+
+PUSH 
+kita dapat melakukan perubahan secara offline pada komputer kita tanpa terhubung internet, disini
+perubahan belum sinkron terhadap code pada remote reposiory, kita perlu melakukan perintah
+"git push" untuk mensingkronisasi perubahan pada lokal kita menuju remote repository.
+
+contoh : push branch 
+misal nama branch di local dan di server sama 
+git push origin master
+git push origin feature/navbar
+
+misal nama branchnya berbeda 
+git push origin main(branch lokal):master(branch di server)
+git push origin navbar:feature/navbar
+
+contoh : hapus branch menggunakan push ( untuk di server )
+git push --delete feature/navbar -> server
+git branch -d navbar -> local
+
+contoh : git clone dengan nama folder berbeda 
+misal di folder local kita sudah ada folder dengan nama yang sama yaitu "belajar-github"
+git clone https://github.com/MuhamadIlhamMubarrok/belajar-github.git belajar-github-2
+
+
+updateee
